@@ -1,38 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Montserrat;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.centerApp {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 56px;
+  font-weight: 400;
+}
+.logo__header {
+  color: #FF6060;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.logo__footer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  padding-top: 48px;
+}
+
+.navBar {
+  float: right;
+  font-size: 12px;
+  line-height: 12px;
+  margin-right: 20px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.navBar a {
+  text-decoration: none;
+  color: #FF6060;
+}
+.navBar a:first-child {
+  margin-right: 26px;
+  border-bottom: 1px solid #FF6060;
+}
+
+.Header {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: black;
+  margin-top: auto;
+}
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  padding-bottom: 46px;
+  font-size: 12px;
+}
+.footer__copyright__text {
+  text-align: center;
+  max-width: 120px;
+  line-height: 18px;
+}
+
+.banner {
+  position: relative;
+  margin: 20px 20px 0 20px;
+}
+.banner__image {
+  width: 100%;
+  max-height: 111px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner__text {
+  position: absolute;
+  max-width: 217px;
+  z-index: 2;
+  left: 16px;
+  bottom: 31px;
+  color: white;
+}
+.banner p {
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 500;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner__content {
+  position: relative;
+  max-height: 111px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.banner__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
+.card:first-child {
+  margin-top: 20px;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.card__title {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  max-width: 300px;
+  z-index: 2;
+  color: white;
+}
+.card h2 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.card__content {
+  position: relative;
+  max-width: 335px;
+  height: 255px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}/*# sourceMappingURL=App.css.map */
