@@ -92,7 +92,6 @@ input {
 }
 .navBar a:first-child {
   margin-right: 26px;
-  border-bottom: 1px solid #FF6060;
 }
 
 .Header {
@@ -215,4 +214,106 @@ input {
   right: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
+}
+
+.logement {
+  margin: 0 20px;
+}
+.logement__content {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.logement__picture {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.logement__title {
+  margin-top: 16px;
+  max-width: 335px;
+}
+.logement h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FF6060;
+}
+.logement__location {
+  margin-top: 5px;
+  max-width: 325px;
+}
+.logement h3 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF6060;
+}
+.logement__tag {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 5px 30px;
+  background-color: #FF6060;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: white;
+}
+.logement__tag__tag:last-child {
+  margin-right: 0;
+}
+
+.fa-star {
+  color: #FF6060;
+}
+
+.withoutRating {
+  color: #E3E3E3;
+}
+
+.ratingAndName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.nameAndPicture {
+  display: inline-flex;
+  align-items: center;
+}
+.nameAndPicture__name {
+  margin-right: 10px;
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+}
+.nameAndPicture__picture {
+  max-width: 32px;
+  max-height: 32px;
+  border-radius: 50%;
+}
+
+.collapse {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.collapse p {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: white;
 }/*# sourceMappingURL=App.css.map */
