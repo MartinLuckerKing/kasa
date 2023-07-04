@@ -2,13 +2,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    &:first-child {
-        margin-top: 20px;
-    }
 
     &__image {
         width: 100%;

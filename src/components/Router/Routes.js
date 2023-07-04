@@ -1,32 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import { Header } from './../Layout/Header';
-import { Footer } from './../Layout/Footer';
-import { Banner } from '../Home/Banner';
-import { DisplayCard } from '../Home/DisplayCard';
-import { LogementDetails } from '../LogementDetails/LogementDetails';
+import { Home } from './../../pages/Home/Home';
+import { LogementDetails } from '../roomDetails/roomDetails';
+import { About } from '../../pages/About/About'
+import { Error404 } from '../../pages/Error/404'
  
 export function AppRoutes() {
   return (
     <>
-    <div>
-      <Header />
-      <main className="centerApp">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Banner />
-              <DisplayCard />
-            </>
-          }/>
-          <Route path="/logement/:id" element={
-            <>
-              <LogementDetails />
-            </>
-          }/>
-        </Routes>
-        </main>
-      </div>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="logement/:id" element={<LogementDetails />} />
+        <Route path="about" element={<About />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </>
   );
 }

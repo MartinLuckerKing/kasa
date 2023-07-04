@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 export function Collapsible(props) {
   const [isActive, setIsActive] = useState(false);
@@ -7,7 +9,7 @@ export function Collapsible(props) {
   const content = useRef(null);
 
   const toggleIsActive = () => {
-    setIsActive((prevState) => !prevState);
+    setIsActive(!isActive);
   };
 
   useEffect(() => {
@@ -16,8 +18,9 @@ export function Collapsible(props) {
 
   return (
     <div className="collapsible">
-      <div className={`collapse ${isActive ? 'active' : ''}`} onClick={toggleIsActive}>
+      <div className={`collapse ${isActive ? 'active' : ''} ${props.classText}`} onClick={toggleIsActive}> 
         <p className='collapse__title'>{props.title}</p>
+        <FontAwesomeIcon className={`collapse__arrowUp ${isActive ? 'rotate' : ''}`} icon={faChevronUp} />
       </div>
       <div
         ref={content}
@@ -25,7 +28,6 @@ export function Collapsible(props) {
           maxHeight: `${maxHeight}`,
           transition: 'max-height 0.2s ease-in',
           overflow: 'hidden',
-          
         }}
         className="content"
       >

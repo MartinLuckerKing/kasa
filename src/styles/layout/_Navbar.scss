@@ -8,12 +8,19 @@
 
     a {
         text-decoration: none;
-        color: $primary-color;
     }
-
     a:first-child {
         margin-right: 26px;
         
-
     }
+
+}
+
+.activeNavbar {
+    color: $primary-color;
+}
+
+.activeNavbar.active {
+    text-decoration: underline;
+
 }
