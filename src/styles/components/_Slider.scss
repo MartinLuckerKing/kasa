@@ -17,6 +17,10 @@
         object-fit: cover;
         border-radius: 10px;
 
+        @media (min-width:$breakpoint-tablet) {
+            max-height: 415px;
+        }
+
         &__count {
             display: none;
             color: white;

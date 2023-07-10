@@ -4,6 +4,12 @@
         align-items: center;
         max-height: 68px;
         max-width: 160px;
+
+        @media (max-width: $breakpoint-mobile-s) {
+            max-height: 58px;
+            max-width: 125px;
+            
+        }
     }
     
     &__header {
