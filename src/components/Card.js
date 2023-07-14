@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function Card({ logement }) {
   return (
-    <Link to={`/logement/${logement.id}`} style={{ textDecoration: "none" }}>
+    <Link to={`/logement/${logement.id}`}>
       <div className="card">
         <div className="card__content">
           <img

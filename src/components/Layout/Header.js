@@ -10,10 +10,10 @@ export function Header() {
       </div>
       <nav className="navBar">
         <NavLink className="activeNavbar" to="/">
-          ACCUEIL
+          accueil
         </NavLink>
         <NavLink className="activeNavbar" to="/about">
-          À PROPOS
+          À propos
         </NavLink>
       </nav>
     </header>

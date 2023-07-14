@@ -19,7 +19,7 @@ export function Slider() {
       );
       setSliderImages(foundSliderImages);
     });
-  }, [id]);
+  });
 
   if (!sliderImages) {
     return <Error404 />;

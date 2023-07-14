@@ -8,11 +8,17 @@
 
     a {
         text-decoration: none;
+        text-transform: uppercase;
+        @media (min-width:$breakpoint-tablet) {
+            text-transform: capitalize;
+        }
     }
     a:first-child {
         margin-right: 26px;
         
     }
+
+    
 
 }
 

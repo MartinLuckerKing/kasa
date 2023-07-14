@@ -15,7 +15,7 @@ export function RoomDetails() {
       const foundRoom = data.default.find((room) => room.id === id);
       setroomDetails(foundRoom);
     });
-  }, [id]);
+  });
 
   function Rating({ score }) {
     let stars = [];
